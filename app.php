@@ -2,7 +2,7 @@
 
 ?>
 
-<div class="row mt-2 mb-2 pt-2 pb-2 rounded head">
+<div class="row">
     <!-- <div class="col-sm-1"><img :src="userData.photo" alt="" class="img-fluid rounded"></div> -->
     <div class="col-12">
         <h3>{{ userData.name }}</h3>

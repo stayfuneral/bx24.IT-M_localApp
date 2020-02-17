@@ -14,5 +14,6 @@
         <title></title>
     </head>
     <body>
-        <div id="app" class="container-fluid">
+        <div class="workarea">
+            <div id="app" class="container-fluid">
             

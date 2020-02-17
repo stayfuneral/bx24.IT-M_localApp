@@ -145,7 +145,7 @@ let app = new Vue({
                 });
                 this.promises.BX24_Promise.then(response => {
                     let userTaskCount = Object.keys(this.userTasks).length
-                    this.resizeFrame(userTaskCount);
+                    // this.resizeFrame(userTaskCount);
                 });
 
                 break;
@@ -164,11 +164,13 @@ let app = new Vue({
                     });
                 }
                 this.promises.TaskPromise.then(response => {
-                    // console.log(this.detailTask)
                 })     
                 break;
             case '/edit.php':
                 break;
         }
-    }
+    },
+    updated : function () {
+        BX24.resizeWindow(document.body.clientWidth, document.getElementsByClassName("workarea")[0].clientHeight);
+    },
 });
