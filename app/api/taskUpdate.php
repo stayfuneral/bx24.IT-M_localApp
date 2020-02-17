@@ -5,7 +5,6 @@ $postDecodedData = json_decode($postRawData, true);
 if(!empty($postDecodedData['fields'])) {
 
     $updateTask = CRest::call('tasks.task.update', $postDecodedData);
-    // writeToLog(__DIR__.'/../../updateTask_'.date('d.m.y_H.i.s').'.txt', ['updateTask' => 'success', 'task' => $updateTask], 'new task update action');
     if(!empty($updateTask['result']['task']) && is_array($updateTask['result']['task'])) {
         echo json_encode(['updateTask' => 'success', 'taskNewStatus' => $updateTask['result']['task']['ufAuto179981168811']], JSON_UNESCAPED_UNICODE);
     }    
@@ -28,15 +27,9 @@ if(!empty($_FILES)) {
             $Files = new SplFileInfo($value);
             if($Files->isFile()) {
                 $tempFiles[] = $value;
-                $tempFile = base64_encode(file_get_contents($value));
+                $tempFile = base64_encode(file_get_contents($value)); // base64-кодированное изображение
                 $fileName = $_FILES['photos']['name'][$taskId][$key];
                 $uploadedFile = $uploadFolder.$fileName;
-
-
-                // move_uploaded_file($value, $uploadedFile);
-
-                // $encodedFile = base64_encode(file_get_contents($uploadedFile));
-
                 $uploadPhotos['add_file_to_task_'.$taskId.'_'.($key+1)] = [
                     'method' => 'task.item.addfile',
                     'params' => [

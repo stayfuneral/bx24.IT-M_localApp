@@ -3,7 +3,6 @@
 ?>
 
 <div class="row">
-    <!-- <div class="col-sm-1"><img :src="userData.photo" alt="" class="img-fluid rounded"></div> -->
     <div class="col-12">
         <h3>{{ userData.name }}</h3>
         <p>{{ userData.workPosition }}</p>

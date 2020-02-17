@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-/*s*/
+
 body {
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.5em;
-    height: 100%;
 }
 
 #app {
@@ -28,11 +27,6 @@ pre {
     color: #2067b0;
     text-decoration: none;
     cursor: pointer;
-}
-
-.dragArea {
-    border: 2px #535c69 dashed;
-    height: 400px;
 }
 
 .ui-btn {

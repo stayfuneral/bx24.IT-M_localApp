@@ -72,6 +72,5 @@ if(!empty($_REQUEST['taskId'])) {
             }
         }
     }
-    writeToLog(__DIR__.'/../../log/detailTask.txt', [date('d.m.Y H:i:s') => $task], 'Task Detail Info');
     echo json_encode($task, JSON_UNESCAPED_UNICODE);
 }
