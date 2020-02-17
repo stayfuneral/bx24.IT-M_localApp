@@ -66,15 +66,6 @@ if(!empty($_FILES)) {
     $tempFiles = [];
 
     if(is_array($_FILES['photos']['tmp_name'][$taskId])) {
-        // $fileCount = count($_FILES['photos']['tmp_name'][$taskId]);
-
-        // if($fileCount < 5) {
-        //     $masterBonus = $penalty;
-        // } else if($fileCount >= 5 && $fileCount <= 10) {
-        //     $masterBonus = $fileCount * 2;
-        // } else if($fileCount > 10) {
-        //     $masterBonus = 20;
-        // }
 
         foreach($_FILES['photos']['tmp_name'][$taskId] as $key => $value) {
 
@@ -92,8 +83,10 @@ if(!empty($_FILES)) {
                         'FILE[CONTENT]' => $tempFile
                     ]
                 ];
+
             }
         }
+        
 
         $uploadPhotos['get_updated_task'] = [
             'method' => 'tasks.task.get',
