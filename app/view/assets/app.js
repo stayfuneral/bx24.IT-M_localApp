@@ -145,7 +145,6 @@ let app = new Vue({
                 });
                 this.promises.BX24_Promise.then(response => {
                     let userTaskCount = Object.keys(this.userTasks).length
-                    // this.resizeFrame(userTaskCount);
                 });
 
                 break;
