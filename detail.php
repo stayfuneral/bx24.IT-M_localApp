@@ -29,6 +29,11 @@
                 </div>                
             </div>
         </div>
+        <div class="card mt-2 mb-2">
+            <h3 v-if="detailTask.masterBonus < 0" class="card-header text-uppercase">Штраф</h3>
+            <h3 v-else class="card-header text-uppercase">Бонус мастера</h3>
+            <div class="h1 card-body">{{detailTask.masterBonus}} ₽</div>
+        </div>
         <button @click="redirect('/app.php')" class="ui-btn ui-btn-light">К списку задач</button>
     </div>
 

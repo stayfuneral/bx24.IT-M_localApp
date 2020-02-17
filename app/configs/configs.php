@@ -19,8 +19,9 @@ $ufClientName = 'UF_AUTO_934441417404';
 $ufClientPhone = 'UF_AUTO_847674715171';
 $ufCrmTask = 'UF_CRM_TASK';
 $ufTaskWebdavFiles = 'UF_TASK_WEBDAV_FILES';
+$ufMasterBonus = 'UF_AUTO_128400396605';
 
-$arSelect = ['ID', 'TITLE', 'STATUS', 'DEADLINE', 'CREATED_DATE', 'CLOSED_DATE', 'START_DATE_PLAN', 'CREATED_BY', 'RESPONSIBLE_ID', $ufStatus, $ufClientAddress, $ufClientName, $ufClientPhone, $ufCrmTask, $ufTaskWebdavFiles];
+$arSelect = ['ID', 'TITLE', 'STATUS', 'DEADLINE', 'CREATED_DATE', 'CLOSED_DATE', 'START_DATE_PLAN', 'CREATED_BY', 'RESPONSIBLE_ID', $ufStatus, $ufClientAddress, $ufClientName, $ufClientPhone, $ufCrmTask, $ufTaskWebdavFiles, $ufMasterBonus];
 
 function getPrintableDate($date, $time = false) {
     $dateFormat = 'd.m.Y';

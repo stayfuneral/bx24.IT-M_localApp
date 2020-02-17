@@ -29,22 +29,25 @@ if(!empty($_REQUEST['taskId'])) {
         $task = [
             'id' => $getTask['id'],
             'title' => $getTask['title'],
-            'departureDate' => getPrintableDate($getTask['createdDate'], true),
+            'departureDate' => getPrintableDate($getTask['startDatePlan'], true),
             'operator' => $getTask['creator']['name'],
             'responsible' => $getTask['responsible']['name'],
             'status' => $taskStatuses[$getTask['ufAuto179981168811']],
             'clientAdress' => $getTask['ufAuto838124798893'],
             'clientName' => $getTask['ufAuto934441417404'],
             'clientPhone' => $getTask['ufAuto847674715171'],
+            'masterBonus' => $getTask['ufAuto128400396605']
         ];
-        (!empty($getTask['closedDate'])) ? $task['closedDate'] = getPrintableDate($getTask['closedDate']) : null;
-        (!empty($getTask['deadline'])) ? $task['deadline'] = getPrintableDate($getTask['deadline']) : null;
+        (!empty($getTask['closedDate'])) ? $task['closedDate'] = getPrintableDate($getTask['closedDate'], true) : null;
+        (!empty($getTask['deadline'])) ? $task['deadline'] = getPrintableDate($getTask['deadline'], true) : null;
 
         if(!empty($getPhotos)) {
             foreach($getPhotos as $photo) {
                 $task['photos'][] = 'https://gazpromneft.bitrix24.ru'.$photo['VIEW_URL'];
             }
         }
+
+
 
         if(!empty($getTask['ufCrmTask'])) {
             foreach($getTask['ufCrmTask'] as $ufCrm) {

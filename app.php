@@ -9,8 +9,8 @@
     </div>
 </div>
 
-<div id="taskList" class="row">
-    <div class="col-md-3 d-flex align-self-stretch justify-content-start" v-for="task in userTasks">
+<div id="taskList" class="row" v-if="userTasks">
+    <div class="col-md-3 col-sm-12 d-flex align-self-stretch" v-for="task in userTasks">
         <div :id="getTaskId(task.id)" class="card bg-light mt-2 mb-2 ml-auto mr-auto">
             <h5 class="card-header clickable" @click="showTask(task.id)">{{task.title}}</h5>
             <ul class="list-group list-group-flush">
@@ -20,8 +20,7 @@
                 <li class="list-group-item"><span class="text-info font-weight-bold">Адрес:</span> {{task.clientAddress}}</li>
             </ul>            
         </div>
-    </div>
-    
+    </div>    
 </div>
 
 
