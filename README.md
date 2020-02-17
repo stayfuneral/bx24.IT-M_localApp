@@ -10,8 +10,6 @@
 * [Vue.js](https://vuejs.org/)
 * [Axios](https://github.com/axios/axios)
 
-Для работы приложения необходимо использовать [SDK Битрикс24](https://github.com/bitrix-tools/crest)
-
 ### Структура файлов
 
 `|/app` - папка приложения
