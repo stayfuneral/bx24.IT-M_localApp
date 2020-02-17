@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+/*s*/
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5em;
+    height: 100%;
+}
+
+#app {
+    width: 100%;
+}
+
+.head {
+    background: #eef2f4;
+}
+
+pre {
+    border-radius: 0.2em;
+    border: 1px #067399 solid;
+    background: #A7DAEC;
+    width: 100%;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.clickable {
+    color: #2067b0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dragArea {
+    border: 2px #535c69 dashed;
+    height: 400px;
+}
+
+.ui-btn {
+    border: none;
+    border-radius: 2px;
+    padding: 0.5em 1em;
+    text-transform: uppercase!important;
+    font-weight: 500;
+}
+
+.ui-btn-primary {
+    background: #3bc8f5;
+    border: none;
+    color: #fff;    
+}
+
+.ui-btn-primary:active {
+    background: #12b1e3;
+}
+
+.ui-btn-primary:hover {
+    background: #3eddff;
+}
+
+.ui-btn-success {
+    background: #bbed21;
+    color: #535c69;
+}
+
+.ui-btn-success:active {
+    background: #b2e232
+}
+
+.ui-btn-success:hover {
+    background: #d2f95f;
+}
+
+.ui-btn-light {
+    background: transparent;
+    border: 1px #c6cdd3 solid;
+    color: #535b69;
+}
+
+.ui-btn-light:hover {
+    background: #cfd4d8;
+}
+
+.ui-btn-light:active {
+    background: #dde2e5;
+}
