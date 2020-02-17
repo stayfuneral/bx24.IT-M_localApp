@@ -123,10 +123,7 @@ if(!empty($_FILES)) {
             ])['result']['task'];
 
             $result = [
-                'uploadFiles' => 'success',
-                // 'taskPhotos' => $fileCount,
-                // 'setMasterBonus' => $setMasterBonus
-
+                'uploadFiles' => 'success'
             ];
             foreach($tempFiles as $tFile) {
                 unlink($tFile);
