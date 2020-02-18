@@ -30,3 +30,34 @@ function getPrintableDate($date, $time = false) {
     }
     return date($dateFormat, strtotime($date));
 }
+
+function getDealId(array $params) {
+    if(!is_array($params)) {
+        return false;
+    }
+
+    foreach($params as $param) {
+        if(preg_match('/D_/', $param)) {
+            $dealId = preg_replace('/[^0-9]/', '', $param);
+        }
+    }
+
+    return $dealId;
+}
+
+function getTask($taskId, $selectFields) {
+    $restMethod = 'tasks.task.get';
+    $params = [
+        'taskId' => $taskId
+    ];
+
+    if(!empty($selectFields)) {
+        $params['select'] = $selectFields;
+    }
+
+    $call = CRest::call($restMethod, $params);
+
+    if(!empty($call['result']['task'])) {
+        return $call['result']['task'];
+    }
+}

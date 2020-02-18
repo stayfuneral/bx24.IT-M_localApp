@@ -8,19 +8,14 @@ if(!empty($postDecodedData['fields'])) {
 
     $updateBatchParams = [];
 
-    $task = CRest::call('tasks.task.get', [
-        'taskId' => $taskId,
-        'select' => $arSelect
-    ])['result']['task'];
+    $task = getTask($taskId, $arSelect);
 
     if(!empty($task['ufCrmTask'])) {
-        foreach($task['ufCrmTask'] as $ufCrm) {
-            if(preg_match('/D_/', $ufCrm)) {
-                $dealId = preg_replace('/[^0-9]/', '', $ufCrm);
-            }
-        }
+        
+        $dealId = getDealId($getTask['ufCrmTask']);
+
     }
-    // $dealStatus = '';
+    
     switch($status) {
         case 2:
             $dealStatus = 'PREPARATION';

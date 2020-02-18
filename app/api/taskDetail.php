@@ -50,11 +50,8 @@ if(!empty($_REQUEST['taskId'])) {
 
 
         if(!empty($getTask['ufCrmTask'])) {
-            foreach($getTask['ufCrmTask'] as $ufCrm) {
-                if(preg_match('/D_/', $ufCrm)) {
-                    $dealId = preg_replace('/[^0-9]/', '', $ufCrm);
-                }
-            }
+            
+            $dealId = getDealId($getTask['ufCrmTask']);
 
             $products = CRest::call('crm.productrow.list', [
                 'filter' => [
