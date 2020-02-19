@@ -10,6 +10,8 @@
 * [Vue.js](https://vuejs.org/)
 * [Axios](https://github.com/axios/axios)
 
+Для корректной работы загрузите файлы `crest.php` и `settings.php` в папку `/app/configs`
+
 ### Структура файлов
 
 `/app` - папка приложения
