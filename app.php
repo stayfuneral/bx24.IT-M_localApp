@@ -1,6 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT'].'/app/view/header.php';
-
-?>
+<?php require $_SERVER['DOCUMENT_ROOT'].'/app/view/header.php';?>
 
 <div class="row">
     <div class="col-12">

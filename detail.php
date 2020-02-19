@@ -1,7 +1,5 @@
 <?php require $_SERVER['DOCUMENT_ROOT'].'/app/view/header.php'; ?>
 
-
-
 <div class="row">
 
     <!-- Task detail info area -->
