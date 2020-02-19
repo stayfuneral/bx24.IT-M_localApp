@@ -14,11 +14,7 @@ if(!empty($postDecodedData) && $postDecodedData['action'] === 'deleteProduct') {
     ])['result']['task'];
 
     if(!empty($task['ufCrmTask'])) {
-        foreach($task['ufCrmTask'] as $ufCrm) {
-            if(preg_match('/D_/', $ufCrm)) {
-                $dealId = preg_replace('/[^0-9]/', '', $ufCrm);
-            }
-        }
+        $dealId = getDealId($getTask['ufCrmTask']);
     }
 
     $products = CRest::call('crm.deal.productrows.get', [
